@@ -1,24 +1,11 @@
-import { StrictMode } from "react";
-import { createRoot } from "react-dom/client";
-import App from "./App.tsx";
-import "./index.css";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.tsx';
+import './global.scss';
+import './index.css';
 
-function render() {
-  createRoot(document.getElementById("root")!).render(
+createRoot(document.getElementById('root')!).render(
     <StrictMode>
-      <App />
+        <App />
     </StrictMode>,
-  );
-}
-
-if (window.AliLowCodeEngine) {
-  render();
-} else {
-  window.addEventListener(
-    "lowcode-engine-ready",
-    () => {
-      render();
-    },
-    { once: true },
-  );
-}
+);

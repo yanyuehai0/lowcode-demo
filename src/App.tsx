@@ -1,7 +1,12 @@
-import Lowcode from "./lowcode";
+import { BrowserRouter } from 'react-router';
+import AppRouter from './router';
 
 function App() {
-  return <Lowcode />;
+    return (
+        <BrowserRouter>
+            <AppRouter />
+        </BrowserRouter>
+    );
 }
 
 export default App;
